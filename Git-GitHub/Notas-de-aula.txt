@@ -1,0 +1,88 @@
+__ Iniciando o Git e criando um commit __
+
+No terminal (comandos):
+:: git init
+- inicializa o repositório no git
+- cria a pasta .git
+:: git add
+:: git commit
+
+arquivos:
+- untracked
+- tracked
+ > unmodified
+ > modified
+ > staged
+
+commit: staged -> unmodified
+
+Servidor: remote repository
+Ambiente de desenvolvimento: 
+As ações que você faz na sua máquina não alteram imediatamente os arquivos no repositório no servidor.
+Você precisa fazer uma sequência de códigos para empurrar para o repositório remoto.
+> working directory
+> staging area
+> local repository
+quando dou um commit, o arquivo move da área de staging e coloca para unmodified (snapshot do momento) e popula o repositório LOCAL
+o repositório local guarda os commits que podem ou não serem enviados para o repositório remoto
+
+>git add nomeArquivo
+>git add *
+> git add .
+
+>git commit -m "mensagem"
+
+Ambiente de desenvolvimento
+WORKING		STAGING		LOCAL
+DIRECTORY	AREA		REPOSITORY
+	>git add	>git commit -m
+
+__ Trabalhando com o GitHub __
+
+No repositório LOCAL:
+git status
+git add nome-arquivo ou git add * (para adicionar todos arquivos criados/alterados)
+git commit "mensagem"
+git status
+
+Do repositório LOCAL para o repositório REMOTO:
+No GitHub: clicar no ícone do meu usuário
+Selecionar Your Repositories
+New
+Copiar a url criada
+Na pasta do arquivo no meu computador abrir o GitBash
+git remote add origin https://url copiada
+git remote -v (mostra a lista dos arquivos cadastrados)
+git push origin master (para enviar para o repositório remoto)
+colocar senha github
+
+__ Resolvendo conflitos __
+
+Conflito de merge: quando o github tenta juntar duas alterações de código e existem duas alterações na mesma linha
+Para puxar para a minha máquina a versão que está no remoto: git pull origin master
+Abrir o arquivo e fazer as alterações devidas
+git add *
+git commit -m "resolve conflitos"
+Empurra de volta pro github
+git push origin master
+
+Como baixar um repositório:
+Clicar em Code -> selecionar o link (url)
+Abre o GitBash: git clone https://endereço-do-repositorio
+
+__ Objetos internos do Git __
+
+Blob: sha1 do arquivo, tipo do objeto, tamanho e conteúdo (metadados)
+Tree: sha1 da árvore, armazenam blobs, nome do arquivo, commits (responsáveis por montar a estrutura)
+> uma árvore pode apontar para outras árvores
+> Quando faço a alteração em um arquivo, na verdade estou alterando toda a estrutura
+Commit: aponta para árvore, parente, autor (commit anterior), mensagem, timestamp, também possuem sha1
+> objeto que vai juntar tudo
+
+__ Vantagens do uso __
+
+:: Controle de versão
+:: Armazenamento em nuvem
+:: Trabalho em equipe
+:: Melhorar seu código
+:: Reconhecimento
