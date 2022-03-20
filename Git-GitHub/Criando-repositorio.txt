@@ -1,0 +1,29 @@
+__ Criando um repositório no GitHub para compartilhar seu progresso __
+
+I - CRIANDO O REPOSITÓRIO A PARTIR DO SERVIDOR REMOTO
+
+1) Acessar minha conta no GitHub
+2) Clicar no ícone de identificação (bolinha com foto)
+3) Escolher a opção 'Your Repositories' 
+4) Clicar no botão 'New'
+5) Nomear o repositório
+6) Acrescentar a descrição
+7) Escolher entre público ou privado
+8) Acrescentar o arquivo README.md (Add a README file)
+9) Clicar no botão 'Create repository' ao fim da página
+
+II - COPIANDO O REPOSITÓRIO PARA A MÁQUINA PARA TRABALHAR LOCALMENTE
+
+1) Na página do repositório criado no GitHub, clicar em 'Code'
+2) Opções Clone -> HTTPS -> Copiar a URL com o endereço do repositório
+3) Na máquina local, navegar até a pasta em que quero armazenar o clone do repositório no servidor remoto
+4) Clicar com o botão direito do mouse e escolher a opção 'GitBash here'
+5) Digitar a linha de comando: git clone https://url-copiada-do-github
+
+III - ATUALIZANDO SERVIDOR REMOTO
+
+1) Depois de modificar/criar arquivos no repositório local, fazer o add: git add .
+2) Verificar o status: git status
+3) Se tudo certo, fazer o commit: git commit -m "mensagem"
+4) Verificar o status novamente: git status
+5) Enviar para o servidor remoto: git push origin main
